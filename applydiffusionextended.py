@@ -5,5 +5,5 @@ def applyDiffusionExtended(latExt):
     extended = N.append(latExt, latExt[:,-1][:,None], axis=1)
     extended = N.insert(latExt, 0, latExt[:,0], axis=1)
     # https://stackoverflow.com/questions/3881453/numpy-add-row-to-array
-    extended = N.vstack(latExt[0], latExt, latExt[-1])
+    extended = N.vstack((latExt[0], latExt, latExt[-1]))
     return extended
